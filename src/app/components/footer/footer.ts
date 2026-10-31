@@ -134,12 +134,8 @@ import { LogoComponent } from '../logo/logo';
         >
           <p>© 2026 OnSteroid. Engineered for fast, private API workflows.</p>
           <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-            <a routerLink="/faq" class="transition-colors hover:text-zinc-300">Privacy</a>
+            <a routerLink="/privacy" class="transition-colors hover:text-zinc-300">Privacy Policy</a>
             <a routerLink="/docs" class="transition-colors hover:text-zinc-300">Docs</a>
-            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-zinc-300">
-              Sitemap
-              <span class="sr-only">(opens in a new tab)</span>
-            </a>
             <a
               [href]="downloadService.githubUrl()"
               target="_blank"

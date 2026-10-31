@@ -106,6 +106,22 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'privacy',
+    loadComponent: () => import('./pages/privacy/privacy').then((m) => m.PrivacyComponent),
+    title: 'Privacy Policy & Local Data Architecture | OnSteroid',
+    data: {
+      seo: {
+        title: 'Privacy Policy & Local Data Architecture | OnSteroid',
+        description:
+          'OnSteroid Privacy Policy: 100% local storage for API keys, collections, and encryption scripts with zero cloud sync and zero telemetry.',
+        keywords:
+          'OnSteroid privacy policy, local first API client, zero telemetry API workspace, private REST client',
+        path: '/privacy',
+        breadcrumbLabel: 'Privacy Policy'
+      } satisfies RouteSeoData
+    }
+  },
+  {
     path: '**',
     redirectTo: ''
   }

@@ -98,12 +98,20 @@ import { DownloadService } from '../../services/download.service';
                   <app-icon name="terminal" class="size-5" />
                 </div>
                 <div>
-                  <h2 class="text-lg font-semibold text-zinc-950">3. Direct Network Dispatch Without Intermediate Proxies</h2>
-                  <p class="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
-                    When you dispatch an HTTP/HTTPS call from OnSteroid, requests are sent directly to the destination server
-                    you designate (via the OS network stack in Desktop, or direct fetch in Web). Your credentials, bearer tokens,
-                    and API request bodies are never routed through intermediary third-party inspection relays.
-                  </p>
+                  <h2 class="text-lg font-semibold text-zinc-950">3. Network Dispatch: Direct OS Stack on Desktop, Custom Proxy on Web</h2>
+                  <div class="mt-3 space-y-3 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
+                    <p>
+                      <strong class="font-semibold text-zinc-900">Desktop Application (Direct OS Dispatch):</strong>
+                      When you dispatch an HTTP/HTTPS call from the Desktop App, requests are sent directly from your computer's native operating system network stack (via Electron V8) straight to the destination server you designate. There are zero intermediate proxies, relays, or CORS restrictions.
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-zinc-900">Web Browser Platform (Dedicated Custom Proxy):</strong>
+                      Web browsers strictly enforce Cross-Origin Resource Sharing (CORS) sandbox security policies that prevent client-side web apps from making direct HTTP calls to arbitrary external domains. To overcome this limitation and enable full API testing in the browser, requests on the web version are routed through our dedicated, open-source custom backend proxy (<code class="font-mono text-xs text-zinc-800">OnSteroidsApi</code>). The proxy strictly relays the network call and returns the raw response.
+                    </p>
+                    <p>
+                      In neither edition are your credentials, bearer tokens, or API request bodies ever logged, monetized, sold, or routed through third-party ad-tracking or data-broker inspection relays.
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>

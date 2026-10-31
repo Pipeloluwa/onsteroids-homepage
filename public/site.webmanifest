@@ -1,0 +1,32 @@
+{
+  "name": "OnSteroid — The API Client On Steroids",
+  "short_name": "OnSteroid",
+  "description": "Open-source, high-performance API client with custom manual encryption scripting, sandboxed JavaScript functions, VS Code Monaco editor, and native desktop speed without cloud paywalls.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#ff6c37",
+  "icons": [
+    {
+      "src": "icons/onsteroids-icon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/onsteroids-icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/onsteroids-icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/onsteroids-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

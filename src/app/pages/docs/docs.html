@@ -1,0 +1,301 @@
+<div class="relative overflow-x-clip bg-white text-zinc-900">
+  <!-- ===================================================================== -->
+  <!-- DOCS HERO                                                             -->
+  <!-- ===================================================================== -->
+  <section
+    class="bleed-under-nav relative isolate overflow-clip border-b border-zinc-950/[0.06] pb-14 md:pb-16"
+    aria-labelledby="docs-heading"
+  >
+    <div class="bg-grid mask-radial pointer-events-none absolute inset-0 -z-20" aria-hidden="true"></div>
+    <div
+      class="pointer-events-none absolute inset-x-0 -top-28 -z-10 mx-auto h-80 w-full max-w-[52rem] rounded-full bg-brand-500/14 blur-[110px]"
+      aria-hidden="true"
+    ></div>
+
+    <div class="container-page pt-10 sm:pt-16">
+      <div class="max-w-3xl">
+        <span class="eyebrow animate-fade-up">
+          <app-icon name="book" class="size-3.5" />
+          <span>Developer Guide &amp; Reference</span>
+        </span>
+
+        <h1
+          id="docs-heading"
+          class="animate-fade-up mt-4 text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-zinc-950"
+        >
+          OnSteroid <span class="text-gradient-brand">Documentation</span>
+        </h1>
+
+        <p class="section-lead animate-fade-up mt-3">
+          Get started quickly with capsules, sandboxed JavaScript lifecycle functions, custom
+          pre-dispatch encryption scripts, and drag-and-drop collection imports.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- DOCS BODY: STICKY SIDEBAR + ARTICLES                                  -->
+  <!-- ===================================================================== -->
+  <div class="container-page py-10 sm:py-14 md:py-20">
+    <div class="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <!-- Sticky Sidebar -->
+      <aside class="min-w-0 lg:col-span-3" aria-label="Documentation table of contents">
+        <div class="card p-4 lg:sticky lg:top-24">
+          <div class="px-3 py-1.5 text-[11px] font-semibold tracking-wider text-zinc-500 uppercase">
+            Quickstart Guide
+          </div>
+          <nav class="mt-1 grid grid-cols-1 gap-1 text-sm font-medium sm:grid-cols-2 lg:block lg:space-y-1">
+            <a
+              routerLink="/docs"
+              fragment="quickstart"
+              class="flex items-center gap-2.5 rounded-xl px-3 py-2 text-zinc-800 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            >
+              <span class="font-mono text-xs font-bold text-brand-700">01</span>
+              <span>First API Request</span>
+            </a>
+            <a
+              routerLink="/docs"
+              fragment="scripts"
+              class="flex items-center gap-2.5 rounded-xl px-3 py-2 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            >
+              <span class="font-mono text-xs font-bold text-brand-700">02</span>
+              <span>Script Functions</span>
+            </a>
+            <a
+              routerLink="/docs"
+              fragment="encryption"
+              class="flex items-center gap-2.5 rounded-xl px-3 py-2 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            >
+              <span class="font-mono text-xs font-bold text-brand-700">03</span>
+              <span>Encryption Scripting</span>
+            </a>
+            <a
+              routerLink="/docs"
+              fragment="importing"
+              class="flex items-center gap-2.5 rounded-xl px-3 py-2 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+            >
+              <span class="font-mono text-xs font-bold text-brand-700">04</span>
+              <span>Import &amp; Drag-Drop</span>
+            </a>
+          </nav>
+
+          <div class="mt-4 grid grid-cols-1 gap-2 border-t border-zinc-200/80 pt-4 sm:grid-cols-2 lg:block lg:space-y-2">
+            <a routerLink="/download" class="btn btn-primary btn-sm w-full">
+              <app-icon name="download" class="size-3.5" [strokeWidth]="2.2" />
+              <span>Download Desktop</span>
+            </a>
+            <a
+              [href]="downloadService.webAppUrl()"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm w-full"
+            >
+              <span>Open Web IDE</span>
+              <app-icon name="arrow-up-right" class="size-3.5 text-zinc-500" />
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Documentation Articles -->
+      <div class="min-w-0 space-y-12 sm:space-y-16 lg:col-span-9">
+        <!-- Section 1: First API Request -->
+        <section id="quickstart" class="scroll-mt-28" aria-labelledby="doc-sec-1">
+          <div class="flex items-center gap-3">
+            <span class="icon-tile-brand shrink-0 font-mono text-xs font-bold">01</span>
+            <h2 id="doc-sec-1" class="text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
+              Making Your First API Request
+            </h2>
+          </div>
+
+          <p class="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base">
+            Creating and dispatching a request in OnSteroid is immediate. Launch either the
+            Standalone Desktop App or the Web Client and click
+            <strong class="font-semibold text-zinc-900">New Request</strong>:
+          </p>
+
+          <ol class="mt-4 list-decimal space-y-2.5 pl-5 text-sm leading-relaxed text-zinc-700 sm:text-base">
+            <li>
+              Select your HTTP verb (<code class="rounded bg-emerald-50 px-1.5 py-0.5 font-mono text-xs font-bold text-emerald-700">GET</code>,
+              <code class="rounded bg-amber-50 px-1.5 py-0.5 font-mono text-xs font-bold text-amber-800">POST</code>,
+              <code class="rounded bg-sky-50 px-1.5 py-0.5 font-mono text-xs font-bold text-sky-700">PUT</code>,
+              <code class="rounded bg-rose-50 px-1.5 py-0.5 font-mono text-xs font-bold text-rose-700">DELETE</code>,
+              <code class="rounded bg-purple-50 px-1.5 py-0.5 font-mono text-xs font-bold text-purple-700">PATCH</code>).
+            </li>
+            <li>
+              Enter your target endpoint URL (for example,
+              <code class="break-all rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">https://jsonplaceholder.typicode.com/todos/1</code>).
+            </li>
+            <li>Configure headers, query parameters, or JSON body fields in Monaco if needed.</li>
+            <li>
+              Click <strong class="font-semibold text-zinc-900">Send</strong> or press
+              <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Enter</kbd>.
+            </li>
+          </ol>
+
+          <div class="mt-5 rounded-2xl border border-zinc-200/80 bg-zinc-50 p-4 font-mono text-xs text-zinc-700">
+            // The response renders immediately in the Monaco viewer with HTTP status code, elapsed latency (ms), payload size, and formatted JSON.
+          </div>
+        </section>
+
+        <!-- Section 2: Sandboxed Script Functions -->
+        <section id="scripts" class="scroll-mt-28 border-t border-zinc-950/[0.06] pt-10 sm:pt-14" aria-labelledby="doc-sec-2">
+          <div class="flex items-center gap-3">
+            <span class="icon-tile shrink-0 font-mono text-xs font-bold text-sky-700">02</span>
+            <h2 id="doc-sec-2" class="text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
+              Sandboxed Script Functions
+            </h2>
+          </div>
+
+          <p class="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base">
+            All user scripts in OnSteroid execute safely inside an isolated iframe sandbox and are
+            structured within <strong class="font-semibold text-zinc-900">enclosed asynchronous parent functions</strong>
+            with explicit parameters injected by the runner:
+          </p>
+
+          <div class="mt-6 space-y-5">
+            <!-- preScript -->
+            <div class="overflow-hidden rounded-2xl bg-zinc-950 text-zinc-200 ring-1 ring-white/10">
+              <div class="flex flex-wrap items-center justify-between gap-1.5 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-2.5 text-xs sm:px-4">
+                <span class="font-medium text-white">Pre-Request Hook • <code class="text-sky-300">preScript</code></span>
+                <span class="font-mono text-[11px] text-zinc-400">Runs before request dispatch</span>
+              </div>
+              <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed sm:p-5 sm:text-[13px]"><span class="tok-com">// Pre-Request Hook (modify headers, body, or params directly):</span>
+<span class="tok-kw">async function</span> <span class="tok-fn">preScript</span>(headers, body, params) &#123;
+  headers[<span class="tok-str">"X-Request-Id"</span>] = crypto.<span class="tok-fn">randomUUID</span>();
+  headers[<span class="tok-str">"X-Client-Time"</span>] = <span class="tok-kw">new</span> Date().<span class="tok-fn">toISOString</span>();
+  params[<span class="tok-str">"debug"</span>] = <span class="tok-str">"true"</span>;
+&#125;</pre>
+            </div>
+
+            <!-- postScript -->
+            <div class="overflow-hidden rounded-2xl bg-zinc-950 text-zinc-200 ring-1 ring-white/10">
+              <div class="flex flex-wrap items-center justify-between gap-1.5 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-2.5 text-xs sm:px-4">
+                <span class="font-medium text-white">Post-Response Hook • <code class="text-emerald-300">postScript</code></span>
+                <span class="font-mono text-[11px] text-zinc-400">Runs after response arrives</span>
+              </div>
+              <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed sm:p-5 sm:text-[13px]"><span class="tok-com">// Post-Response Hook (read response headers, status, and payload):</span>
+<span class="tok-kw">async function</span> <span class="tok-fn">postScript</span>(responseHeaders, responseBody, headers, body, params) &#123;
+  console.<span class="tok-fn">log</span>(<span class="tok-str">"Response received:"</span>, responseBody);
+&#125;</pre>
+            </div>
+
+            <!-- testScript -->
+            <div class="overflow-hidden rounded-2xl bg-zinc-950 text-zinc-200 ring-1 ring-white/10">
+              <div class="flex flex-wrap items-center justify-between gap-1.5 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-2.5 text-xs sm:px-4">
+                <span class="font-medium text-white">Test Runner Hook • <code class="text-brand-300">testScript</code></span>
+                <span class="font-mono text-[11px] text-zinc-400">Assertions &amp; boolean pass/fail</span>
+              </div>
+              <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed sm:p-5 sm:text-[13px]"><span class="tok-com">// Test Script (receives status, timing, body &amp; headers):</span>
+<span class="tok-kw">async function</span> <span class="tok-fn">testScript</span>(responseStatus, responseTime, responseBody, responseHeaders) &#123;
+  <span class="tok-fn">test</span>(<span class="tok-str">"Response status is 200 OK"</span>, () =&gt; responseStatus === <span class="tok-num">200</span>);
+  <span class="tok-fn">test</span>(<span class="tok-str">"Latency under 1.5s"</span>, () =&gt; responseTime &lt; <span class="tok-num">1500</span>);
+  <span class="tok-kw">let</span> passed = responseStatus === <span class="tok-num">200</span>;
+  <span class="tok-kw">return</span> passed;
+&#125;</pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Custom Manual Encryption Scripting -->
+        <section id="encryption" class="scroll-mt-28 border-t border-zinc-950/[0.06] pt-10 sm:pt-14" aria-labelledby="doc-sec-3">
+          <div class="flex items-center gap-3">
+            <span class="icon-tile-brand shrink-0 font-mono text-xs font-bold">03</span>
+            <h2 id="doc-sec-3" class="text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
+              Custom Manual Encryption Scripting
+            </h2>
+          </div>
+
+          <p class="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base">
+            When working with APIs that require bespoke payload encryption, hashing, or signatures,
+            OnSteroid provides an enclosed <strong class="font-semibold text-zinc-900">encryptScript</strong>
+            function runner:
+          </p>
+
+          <ol class="mt-4 list-decimal space-y-2.5 pl-5 text-sm leading-relaxed text-zinc-700 sm:text-base">
+            <li>Navigate to the <strong class="font-semibold text-zinc-900">Encryption</strong> tab inside the Monaco request editor.</li>
+            <li>
+              Write your custom JavaScript logic inside the enclosed
+              <code class="wrap-break-word rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">encryptScript(headers, body, params, encryptedHeaders, encryptedBodyPaths)</code>
+              function.
+            </li>
+            <li>
+              Mutate the <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">headers</code>
+              and <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">body</code>
+              arguments directly.
+            </li>
+            <li>
+              When you click <strong class="font-semibold text-zinc-900">Send</strong>, your encryption script runs first in the isolated sandbox before the HTTP request is dispatched.
+            </li>
+          </ol>
+
+          <div class="mt-6 overflow-hidden rounded-2xl bg-zinc-950 text-zinc-200 ring-1 ring-white/10">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-2.5 text-xs sm:px-4">
+              <span class="font-medium text-white">Enclosed Encryption Function in Monaco Editor</span>
+              <span class="font-mono text-[11px] text-emerald-400">Pre-Dispatch Transformation</span>
+            </div>
+            <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed sm:p-5 sm:text-[13px]"><span class="tok-kw">async function</span> <span class="tok-fn">encryptScript</span>(headers, body, params, encryptedHeaders, encryptedBodyPaths) &#123;
+  <span class="tok-com">// Compute custom hash / signature or encrypt sensitive fields:</span>
+  headers[<span class="tok-str">"X-Signature"</span>] = <span class="tok-str">"sig_"</span> + <span class="tok-fn">btoa</span>(JSON.<span class="tok-fn">stringify</span>(body));
+  <span class="tok-kw">if</span> (body &amp;&amp; body.sensitiveField) &#123;
+    body.sensitiveField = <span class="tok-fn">btoa</span>(body.sensitiveField);
+  &#125;
+&#125;</pre>
+          </div>
+        </section>
+
+        <!-- Section 4: Collection Import & Drag-and-Drop -->
+        <section id="importing" class="scroll-mt-28 border-t border-zinc-950/[0.06] pt-10 sm:pt-14" aria-labelledby="doc-sec-4">
+          <div class="flex items-center gap-3">
+            <span class="icon-tile shrink-0 font-mono text-xs font-bold text-purple-700">04</span>
+            <h2 id="doc-sec-4" class="text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
+              Collection Import &amp; Drag-and-Drop
+            </h2>
+          </div>
+
+          <p class="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base">
+            OnSteroid supports three zero-friction import pathways to bring your existing API suites
+            into your local workspace:
+          </p>
+
+          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <article class="card p-5">
+              <span class="icon-tile">
+                <app-icon name="upload" class="size-4 text-purple-600" />
+              </span>
+              <h3 class="mt-4 text-base font-semibold text-zinc-950">Drag &amp; Drop .JSON</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-zinc-600">
+                Drag and drop any OnSteroid capsule export JSON file directly onto the application
+                window to parse capsules, requests, tests, and variables.
+              </p>
+            </article>
+
+            <article class="card p-5">
+              <span class="icon-tile">
+                <app-icon name="link" class="size-4 text-emerald-600" />
+              </span>
+              <h3 class="mt-4 text-base font-semibold text-zinc-950">Swagger / OpenAPI URL</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-zinc-600">
+                Open the <strong>Import</strong> tab, paste any public or internal Swagger UI /
+                OpenAPI specification URL, and OnSteroid auto-generates paths, verbs, and sample payloads.
+              </p>
+            </article>
+
+            <article class="card p-5">
+              <span class="icon-tile">
+                <app-icon name="layers" class="size-4 text-brand-600" />
+              </span>
+              <h3 class="mt-4 text-base font-semibold text-zinc-950">Shared Capsule Links</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-zinc-600">
+                Paste a shared capsule URL or token from a teammate to synchronize endpoint groups
+                and environment templates directly into your workspace.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

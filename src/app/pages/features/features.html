@@ -1,0 +1,466 @@
+<div class="relative overflow-x-clip bg-white text-zinc-900">
+  <!-- ===================================================================== -->
+  <!-- PAGE HERO                                                             -->
+  <!-- ===================================================================== -->
+  <section
+    class="bleed-under-nav relative isolate overflow-clip pb-16 md:pb-24"
+    aria-labelledby="features-page-heading"
+  >
+    <div class="bg-grid mask-radial pointer-events-none absolute inset-0 -z-20" aria-hidden="true"></div>
+    <div
+      class="pointer-events-none absolute inset-x-0 -top-28 -z-10 mx-auto h-96 w-full max-w-[56rem] rounded-full bg-brand-500/15 blur-[110px]"
+      aria-hidden="true"
+    ></div>
+
+    <div class="container-page pt-10 text-center sm:pt-16">
+      <span class="eyebrow animate-fade-up">
+        <app-icon name="sparkles" class="size-3.5" />
+        <span>Feature Tour</span>
+      </span>
+
+      <h1
+        id="features-page-heading"
+        class="animate-fade-up mx-auto mt-4 max-w-2xl text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-zinc-950"
+      >
+        Built for Modern <span class="text-gradient-brand">API Engineering</span>
+      </h1>
+
+      <p class="section-lead animate-fade-up mx-auto mt-4 max-w-2xl">
+        Discover how OnSteroid eliminates rigid testing constraints with custom pre-dispatch
+        encryption scripting, isolated sandbox functions, drag-and-drop imports, and the VS Code
+        Monaco editor.
+      </p>
+
+      <!-- Quick Section Jump Pills -->
+      <nav
+        aria-label="Feature sections"
+        class="animate-fade-up mt-8 flex flex-wrap items-center justify-center gap-2 text-xs font-medium"
+      >
+        <a
+          routerLink="/features"
+          fragment="encryption"
+          class="inline-flex items-center gap-1.5 rounded-full border border-zinc-950/10 bg-white px-3.5 py-2 text-zinc-700 shadow-2xs transition-colors hover:border-brand-500/40 hover:text-zinc-950"
+        >
+          <app-icon name="lock" class="size-3.5 text-brand-600" />
+          <span>Encryption Scripting</span>
+        </a>
+        <a
+          routerLink="/features"
+          fragment="sandbox"
+          class="inline-flex items-center gap-1.5 rounded-full border border-zinc-950/10 bg-white px-3.5 py-2 text-zinc-700 shadow-2xs transition-colors hover:border-brand-500/40 hover:text-zinc-950"
+        >
+          <app-icon name="zap" class="size-3.5 text-sky-600" />
+          <span>Sandboxed Functions</span>
+        </a>
+        <a
+          routerLink="/features"
+          fragment="import"
+          class="inline-flex items-center gap-1.5 rounded-full border border-zinc-950/10 bg-white px-3.5 py-2 text-zinc-700 shadow-2xs transition-colors hover:border-brand-500/40 hover:text-zinc-950"
+        >
+          <app-icon name="upload" class="size-3.5 text-purple-600" />
+          <span>Drag &amp; Drop Import</span>
+        </a>
+        <a
+          routerLink="/features"
+          fragment="monaco"
+          class="inline-flex items-center gap-1.5 rounded-full border border-zinc-950/10 bg-white px-3.5 py-2 text-zinc-700 shadow-2xs transition-colors hover:border-brand-500/40 hover:text-zinc-950"
+        >
+          <app-icon name="code" class="size-3.5 text-emerald-600" />
+          <span>Monaco Editor</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FEATURE 1: CUSTOM ENCRYPTION SCRIPTING                                -->
+  <!-- ===================================================================== -->
+  <section
+    id="encryption"
+    class="border-t border-zinc-950/[0.06] py-14 sm:py-20 md:py-24"
+    aria-labelledby="feat-encryption-title"
+  >
+    <div class="container-page grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <div class="min-w-0 lg:col-span-6">
+        <div class="eyebrow">
+          <app-icon name="lock" class="size-3.5" />
+          <span>Custom Pre-Dispatch Scripting</span>
+        </div>
+        <h2
+          id="feat-encryption-title"
+          class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-3xl"
+        >
+          Dedicated Manual Encryption Scripting Section
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Real-world banking, enterprise, and payment APIs rarely fit into rigid, one-size-fits-all
+          encryption checkboxes. Many gateways demand proprietary hashing, custom HMAC-SHA256
+          signatures, or selective field encryption.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Instead of locking you into predefined toggles, OnSteroid provides a dedicated
+          <strong class="font-semibold text-zinc-900">Encryption Script Tab</strong> powered by
+          Monaco. Write your custom encryption or signature logic manually in JavaScript — it runs
+          right before the request is dispatched, mutating headers or payload properties exactly as
+          your backend expects.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-sm text-zinc-700">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>
+              Per-field Monaco gutter lock icons (<code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">encryptedBodyPaths</code>) and per-header lock toggles (<code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">encryptedHeaders</code>) with <strong class="font-semibold text-zinc-900">Auto-encrypt</strong>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>
+              Direct programmatic access to mutate
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">headers</code>,
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">body</code>, and
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">params</code>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Dedicated <strong class="font-semibold text-zinc-900">Encryption Console</strong> tab in the Response Viewer for live cipher debugging</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dark Code Window -->
+      <div class="min-w-0 lg:col-span-6">
+        <div
+          class="overflow-hidden rounded-2xl bg-zinc-950 text-zinc-100 shadow-[0_24px_60px_-20px_rgb(9_9_11/0.4)] ring-1 ring-white/10"
+        >
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-3 text-xs sm:px-4">
+            <div class="flex items-center gap-2">
+              <span class="size-2.5 shrink-0 rounded-full bg-brand-500"></span>
+              <span class="font-medium text-white">Encryption Script Editor (Monaco)</span>
+            </div>
+            <span class="rounded bg-emerald-500/15 px-2 py-0.5 font-mono text-[11px] font-medium text-emerald-300">
+              Auto-encrypt • Run / Reset / Delete
+            </span>
+          </div>
+          <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed text-zinc-200 sm:p-5 sm:text-[13px]"><span class="tok-kw">async function</span> <span class="tok-fn">encryptScript</span>(headers, body, params, encryptedHeaders, encryptedBodyPaths) &#123;
+  <span class="tok-com">//only code written within this code block will be executed</span>
+  <span class="tok-kw">for</span> (<span class="tok-kw">const</span> path <span class="tok-kw">of</span> encryptedBodyPaths) &#123;
+    body[path] = <span class="tok-str">'enc_aes256_'</span> + <span class="tok-fn">btoa</span>(String(body[path]));
+  &#125;
+  <span class="tok-kw">for</span> (<span class="tok-kw">const</span> key <span class="tok-kw">of</span> encryptedHeaders) &#123;
+    headers[key] = <span class="tok-str">'enc_hdr_'</span> + <span class="tok-fn">btoa</span>(String(headers[key]));
+  &#125;
+  headers[<span class="tok-str">'X-Signature'</span>] = <span class="tok-fn">customHmac</span>(JSON.<span class="tok-fn">stringify</span>(body), params.secretKey);
+&#125;</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FEATURE 2: SANDBOXED SCRIPT FUNCTIONS                                 -->
+  <!-- ===================================================================== -->
+  <section
+    id="sandbox"
+    class="border-t border-zinc-950/[0.06] bg-zinc-50/70 py-14 sm:py-20 md:py-24"
+    aria-labelledby="feat-sandbox-title"
+  >
+    <div class="container-page grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <!-- Dark Code Window -->
+      <div class="order-2 min-w-0 lg:order-1 lg:col-span-6">
+        <div
+          class="overflow-hidden rounded-2xl bg-zinc-950 text-zinc-100 shadow-[0_24px_60px_-20px_rgb(9_9_11/0.4)] ring-1 ring-white/10"
+        >
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-3 text-xs sm:px-4">
+            <div class="flex items-center gap-2">
+              <span class="size-2.5 shrink-0 rounded-full bg-sky-400"></span>
+              <span class="font-medium text-white">Tests Script Window</span>
+            </div>
+            <span class="rounded bg-sky-500/15 px-2 py-0.5 font-mono text-[11px] font-medium text-sky-300">
+              Isolated Iframe Sandbox
+            </span>
+          </div>
+          <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed text-zinc-200 sm:p-5 sm:text-[13px]"><span class="tok-com">// Enclosed Test Function:</span>
+<span class="tok-kw">async function</span> <span class="tok-fn">testScript</span>(responseStatus, responseTime, responseBody, responseHeaders) &#123;
+  <span class="tok-fn">test</span>(<span class="tok-str">"User authentication succeeded"</span>, () =&gt; responseStatus === <span class="tok-num">200</span>);
+  <span class="tok-fn">test</span>(<span class="tok-str">"Response time under 800ms"</span>, () =&gt; responseTime &lt; <span class="tok-num">800</span>);
+
+  <span class="tok-kw">let</span> passed = responseStatus === <span class="tok-num">200</span> &amp;&amp; responseTime &lt; <span class="tok-num">800</span>;
+  <span class="tok-kw">return</span> passed;
+&#125;</pre>
+        </div>
+      </div>
+
+      <div class="order-1 min-w-0 lg:order-2 lg:col-span-6">
+        <div class="eyebrow">
+          <app-icon name="zap" class="size-3.5" />
+          <span>Script Automation</span>
+        </div>
+        <h2
+          id="feat-sandbox-title"
+          class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-3xl"
+        >
+          Dedicated Enclosed Script Functions
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Every script in OnSteroid is written inside a clear, enclosed asynchronous parent function
+          with explicit arguments passed in for headers, body, query parameters, and response data.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          All user scripts execute inside an isolated sandbox iframe via asynchronous
+          <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-brand-700">postMessage</code>
+          boundaries, guaranteeing that untrusted collection scripts can never compromise application
+          state or leak local credentials.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-sm text-zinc-700">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>
+              Explicit parameter signatures for
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-zinc-800">preScript</code>,
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-zinc-800">postScript</code>, and
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-zinc-800">testScript</code>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>
+              Native boolean returns and integrated
+              <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-zinc-800">test(name, fn)</code>
+              assertion runner
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Direct header and query parameter mutation before request flight</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FEATURE 3: DRAG & DROP + SWAGGER / OPENAPI IMPORT                     -->
+  <!-- ===================================================================== -->
+  <section
+    id="import"
+    class="border-t border-zinc-950/[0.06] py-14 sm:py-20 md:py-24"
+    aria-labelledby="feat-import-title"
+  >
+    <div class="container-page grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <div class="min-w-0 lg:col-span-6">
+        <div class="eyebrow">
+          <app-icon name="upload" class="size-3.5" />
+          <span>Instant Migration</span>
+        </div>
+        <h2
+          id="feat-import-title"
+          class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-3xl"
+        >
+          Drag &amp; Drop Collection &amp; Swagger Import
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Importing your API endpoints into OnSteroid takes seconds. Upload or drag and drop any
+          OnSteroid capsule export JSON file directly into the app window, and the entire tree of
+          capsules, requests, headers, variables, and scripts is parsed immediately.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Working with OpenAPI or Swagger? Simply paste your Swagger documentation URL or raw spec
+          link. OnSteroid automatically discovers the endpoints, parses parameters, and generates a
+          ready-to-test capsule.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-sm text-zinc-700">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Drag-and-drop support for OnSteroid JSON capsule exports and shared capsule links</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Paste any Swagger / OpenAPI URL to auto-generate request capsules</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Zero cloud uploads — files are parsed entirely in-memory on your machine</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Visual Dropzone Card -->
+      <div class="min-w-0 lg:col-span-6">
+        <div class="card p-4 sm:p-8">
+          <div
+            class="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-zinc-300 bg-zinc-50/80 px-4 py-8 text-center sm:px-6 sm:py-10"
+          >
+            <span class="icon-tile-brand size-12 rounded-2xl">
+              <app-icon name="folder" class="size-6" />
+            </span>
+            <h3 class="mt-4 text-base font-semibold text-zinc-950">
+              Drag &amp; Drop <code class="font-mono text-sm text-brand-700">.json</code> Collection Anywhere
+            </h3>
+            <p class="mt-1.5 max-w-sm text-xs leading-relaxed text-zinc-600">
+              Drop your OnSteroid capsule export JSON file onto the window or paste a shared capsule
+              token to import endpoints, variables, and scripts in milliseconds.
+            </p>
+            <div
+              class="mt-4 inline-flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-800"
+            >
+              <app-icon name="check" class="size-3.5 shrink-0" [strokeWidth]="2.5" />
+              <span>Supported Across Desktop &amp; Web Editions</span>
+            </div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-zinc-200/80 bg-white px-3.5 py-3 text-xs sm:px-4">
+            <div class="flex min-w-0 flex-1 items-center gap-2">
+              <app-icon name="link" class="size-4 shrink-0 text-brand-600" />
+              <span class="min-w-0 truncate font-mono text-zinc-700">https://petstore3.swagger.io/api/v3/openapi.json</span>
+            </div>
+            <span class="shrink-0 rounded-md bg-zinc-900 px-2.5 py-1 font-semibold text-white">
+              Auto-Import
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FEATURE 4: MONACO EDITOR INTEGRATION                                  -->
+  <!-- ===================================================================== -->
+  <section
+    id="monaco"
+    class="border-t border-zinc-950/[0.06] bg-zinc-50/70 py-14 sm:py-20 md:py-24"
+    aria-labelledby="feat-monaco-title"
+  >
+    <div class="container-page grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <!-- Dark Code Window -->
+      <div class="order-2 min-w-0 lg:order-1 lg:col-span-6">
+        <div
+          class="overflow-hidden rounded-2xl bg-zinc-950 text-zinc-100 shadow-[0_24px_60px_-20px_rgb(9_9_11/0.4)] ring-1 ring-white/10"
+        >
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08] bg-zinc-900/80 px-3.5 py-3 text-xs sm:px-4">
+            <div class="flex items-center gap-2">
+              <span class="size-2.5 shrink-0 rounded-full bg-emerald-400"></span>
+              <span class="font-medium text-white">Monaco JSON Schema Validation</span>
+            </div>
+            <span class="rounded bg-emerald-500/15 px-2 py-0.5 font-mono text-[11px] font-medium text-emerald-300">
+              Valid JSON • 0 Lint Errors
+            </span>
+          </div>
+          <pre class="overflow-x-auto p-4 font-mono text-xs leading-relaxed text-zinc-200 sm:p-5 sm:text-[13px]">&#123;
+  <span class="tok-key">"apiVersion"</span>: <span class="tok-str">"2026-10"</span>,
+  <span class="tok-key">"webhook"</span>: &#123;
+    <span class="tok-key">"url"</span>: <span class="tok-str">"https://api.onsteroid.com/events"</span>,
+    <span class="tok-key">"events"</span>: [<span class="tok-str">"payment.succeeded"</span>, <span class="tok-str">"refund.created"</span>]
+  &#125;
+&#125;</pre>
+        </div>
+      </div>
+
+      <div class="order-1 min-w-0 lg:order-2 lg:col-span-6">
+        <div class="eyebrow">
+          <app-icon name="code" class="size-3.5" />
+          <span>VS Code Power</span>
+        </div>
+        <h2
+          id="feat-monaco-title"
+          class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-3xl"
+        >
+          Microsoft VS Code Monaco Editor Built-In
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Editing deeply nested JSON bodies or complex scripts inside plain browser textareas is a
+          recipe for syntax errors. OnSteroid embeds Monaco — the exact code editor engine that
+          powers Microsoft Visual Studio Code.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-sm text-zinc-700">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Real-time syntax linting with inline error squiggles</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>
+              Auto-format documents with a single shortcut (<kbd class="kbd">Shift</kbd>+<kbd class="kbd">Alt</kbd>+<kbd class="kbd">F</kbd>)
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Foldable JSON keys, bracket matching, and multi-cursor editing</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- CLOSING CTA BANNER                                                    -->
+  <!-- ===================================================================== -->
+  <section class="py-20 md:py-24" aria-labelledby="features-cta-heading">
+    <div class="container-page">
+      <div
+        class="relative isolate overflow-hidden rounded-3xl bg-zinc-950 px-6 py-14 text-center text-white shadow-[0_24px_70px_-20px_rgb(9_9_11/0.45)] sm:px-12 md:py-18"
+      >
+        <div class="bg-grid-dark mask-radial-center pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
+        <div
+          class="pointer-events-none absolute -top-24 left-1/2 -z-10 h-64 w-[38rem] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[100px]"
+          aria-hidden="true"
+        ></div>
+
+        <h2
+          id="features-cta-heading"
+          class="text-2xl font-semibold tracking-[-0.03em] text-white sm:text-3xl"
+        >
+          Experience Every Feature Today
+        </h2>
+        <p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-zinc-400 sm:text-base">
+          Download the native desktop client for unrestricted speed, zero CORS blocks, and 100%
+          local privacy.
+        </p>
+
+        <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a routerLink="/download" class="btn btn-primary btn-lg w-full sm:w-auto">
+            <app-icon name="download" class="size-4" [strokeWidth]="2.2" />
+            <span>Download Standalone Desktop Client</span>
+          </a>
+          <a
+            [href]="downloadService.webAppUrl()"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-ghost-dark btn-lg w-full sm:w-auto"
+          >
+            <span>Launch Web Client in Browser</span>
+            <app-icon name="arrow-up-right" class="size-4" />
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -175,7 +175,7 @@ export class FaqComponent {
       category: 'Privacy & Security',
       question: 'Does OnSteroid send my API keys or requests to external servers?',
       answer:
-        'By default, OnSteroid operates in local-first mode where your collections, secret keys, tokens, and payloads are stored locally in your device/browser storage. If you choose to log in, you can optionally persist and sync your collections to your authenticated backend database. Dispatched HTTP requests route directly to your target hosts on Desktop via the OS network stack, while the Web edition routes cross-origin requests through our dedicated custom backend proxy (OnSteroidsApi) to overcome browser CORS limitations. Your credentials and payloads are never passed to third-party ad brokers or inspection relays.'
+        'By default, OnSteroid operates in local-first mode where your collections, secret keys, tokens, and payloads are stored locally in your device/browser storage. If you choose to log in, you can optionally persist and sync your collections to your authenticated backend database. Dispatched HTTP requests route directly to your target hosts on Desktop via the OS network stack, while the Web edition routes cross-origin requests through our dedicated custom backend proxy (OnSteroidsApi) to overcome browser CORS limitations. Backend activities are logged primarily for error troubleshooting, operational diagnostics, and service stability—never monetized, sold, or shared with third-party advertising networks.'
     },
     {
       id: 'encryption-script',

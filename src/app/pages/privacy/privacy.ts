@@ -82,11 +82,12 @@ import { DownloadService } from '../../services/download.service';
                   <app-icon name="eye-off" class="size-5" />
                 </div>
                 <div>
-                  <h2 class="text-lg font-semibold text-zinc-950">2. Zero Third-Party Telemetry &amp; Zero Behavioral Tracking</h2>
+                  <h2 class="text-lg font-semibold text-zinc-950">2. Zero Third-Party Advertising &amp; Diagnostic Logging</h2>
                   <p class="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
-                    OnSteroid does not include third-party advertising trackers, user behavior analytics, or telemetry scrapers.
-                    We never harvest or monetize your request payloads, variables, or responses. Account creation is always optional—you
-                    are never blocked by mandatory paywalls or sign-in requirements to execute requests or test APIs.
+                    OnSteroid does not include third-party advertising trackers, marketing scrapers, or commercial data brokers.
+                    Backend activities and request diagnostics are logged primarily for error troubleshooting, operational stability,
+                    and debugging purposes. Your data is never monetized, sold, or used for behavioral ad profiling.
+                    Account creation is always optional—you are never blocked by mandatory paywalls or sign-in requirements to execute requests or test APIs.
                   </p>
                 </div>
               </div>
@@ -109,7 +110,8 @@ import { DownloadService } from '../../services/download.service';
                       Web browsers strictly enforce Cross-Origin Resource Sharing (CORS) sandbox security policies that prevent client-side web apps from making direct HTTP calls to arbitrary external domains. To overcome this limitation and enable full API testing in the browser, requests on the web version are routed through our dedicated, open-source custom backend proxy (<code class="font-mono text-xs text-zinc-800">OnSteroidsApi</code>). The proxy strictly relays the network call and returns the raw response.
                     </p>
                     <p>
-                      In neither edition are your credentials, bearer tokens, or API request bodies ever logged, monetized, sold, or routed through third-party ad-tracking or data-broker inspection relays.
+                      <strong class="font-semibold text-zinc-900">Logging &amp; Troubleshooting:</strong>
+                      Backend activities and proxy requests are logged primarily for error troubleshooting, performance diagnostics, and system stability. Your data is never monetized, sold, or routed through third-party ad-tracking or data-broker inspection relays.
                     </p>
                   </div>
                 </div>

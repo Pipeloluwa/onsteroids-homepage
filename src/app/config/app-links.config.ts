@@ -68,8 +68,8 @@ export const APP_LINKS_CONFIG: AppLinksConfig = {
   // Hosted Web App URL
   webAppRootUrl: 'https://app.onsteroid.com',
 
-  // Empty string ('') means desktop files are in the same root directory where this homepage is hosted
-  desktopDownloadsDirectory: '',
+  // 'download' means desktop files are served from '/download/<filename>' under the homepage root in IIS
+  desktopDownloadsDirectory: 'download',
 
   // Path to open the web version
   webAppLaunchPath: '/',

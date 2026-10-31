@@ -111,11 +111,11 @@ export const routes: Routes = [
     title: 'Privacy Policy & Local Data Architecture | OnSteroid',
     data: {
       seo: {
-        title: 'Privacy Policy & Local Data Architecture | OnSteroid',
+        title: 'Privacy Policy & Local-First Data Architecture | OnSteroid',
         description:
-          'OnSteroid Privacy Policy: 100% local storage for API keys, collections, and encryption scripts with zero cloud sync and zero telemetry.',
+          'OnSteroid Privacy Policy: Local-first by default with optional backend cloud sync when logged in, zero third-party telemetry, and direct network dispatch.',
         keywords:
-          'OnSteroid privacy policy, local first API client, zero telemetry API workspace, private REST client',
+          'OnSteroid privacy policy, local first API client, optional cloud sync API workspace, zero telemetry, private REST client',
         path: '/privacy',
         breadcrumbLabel: 'Privacy Policy'
       } satisfies RouteSeoData

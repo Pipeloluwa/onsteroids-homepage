@@ -37,7 +37,7 @@ import { LogoComponent } from '../logo/logo';
                 class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-medium text-zinc-300"
               >
                 <app-icon name="eye-off" class="size-3.5" />
-                Zero Cloud Telemetry
+                Zero Third-Party Telemetry
               </span>
             </div>
           </div>

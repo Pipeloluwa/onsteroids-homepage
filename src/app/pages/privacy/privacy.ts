@@ -25,7 +25,7 @@ import { DownloadService } from '../../services/download.service';
         <div class="container-page pt-10 text-center sm:pt-16">
           <span class="eyebrow animate-fade-up">
             <app-icon name="shield-check" class="size-3.5" />
-            <span>Local-First Security</span>
+            <span>Privacy &amp; Data Control</span>
           </span>
 
           <h1
@@ -36,8 +36,8 @@ import { DownloadService } from '../../services/download.service';
           </h1>
 
           <p class="section-lead animate-fade-up mx-auto mt-4 max-w-2xl">
-            OnSteroid is engineered so your API keys, bearer tokens, encryption scripts, and
-            request collections never leave your device.
+            OnSteroid puts you in full control of your data. Work completely offline with local storage,
+            or optionally sign in to persist and sync collections to your authenticated backend database.
           </p>
         </div>
       </section>
@@ -54,16 +54,24 @@ import { DownloadService } from '../../services/download.service';
                   <app-icon name="lock" class="size-5" />
                 </div>
                 <div>
-                  <h2 class="text-lg font-semibold text-zinc-950">1. 100% Local Data Storage</h2>
-                  <p class="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
-                    All workspaces, collections, environment variables, auth credentials, and
-                    custom JavaScript encryption scripts (<code class="font-mono text-xs text-zinc-800">encryptScript</code>,
-                    <code class="font-mono text-xs text-zinc-800">preScript</code>,
-                    <code class="font-mono text-xs text-zinc-800">postScript</code>) are stored exclusively on your
-                    local machine (native disk storage in the Desktop App or browser
-                    <code class="font-mono text-xs text-zinc-800">localStorage</code> in the Web Client). We do not
-                    operate cloud databases that store your API workspaces.
-                  </p>
+                  <h2 class="text-lg font-semibold text-zinc-950">1. Local-First by Default with Optional Backend Persistence</h2>
+                  <div class="mt-3 space-y-3 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
+                    <p>
+                      <strong class="font-semibold text-zinc-900">Local-first mode:</strong> By default and without logging in,
+                      all workspaces, collections, environment variables, authentication credentials, and custom JavaScript encryption
+                      scripts (<code class="font-mono text-xs text-zinc-800">encryptScript</code>,
+                      <code class="font-mono text-xs text-zinc-800">preScript</code>,
+                      <code class="font-mono text-xs text-zinc-800">postScript</code>) are stored directly on your machine
+                      (native file storage in the Desktop App or browser <code class="font-mono text-xs text-zinc-800">localStorage</code> / IndexedDB in the Web Client).
+                      In this mode, zero workspace data leaves your device.
+                    </p>
+                    <p>
+                      <strong class="font-semibold text-zinc-900">Optional backend sync:</strong> If you choose to authenticate and create an account,
+                      OnSteroid allows you to save and synchronize your collections, request capsules, and history to your backend database.
+                      This ensures your API assets stay accessible across multiple workstations and sessions without manual export/import steps.
+                      You are always in control of whether data is stored strictly locally or persisted to your cloud account.
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>
@@ -74,11 +82,11 @@ import { DownloadService } from '../../services/download.service';
                   <app-icon name="eye-off" class="size-5" />
                 </div>
                 <div>
-                  <h2 class="text-lg font-semibold text-zinc-950">2. Zero Telemetry &amp; Zero Analytics Tracking</h2>
+                  <h2 class="text-lg font-semibold text-zinc-950">2. Zero Third-Party Telemetry &amp; Zero Behavioral Tracking</h2>
                   <p class="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
-                    OnSteroid does not collect usage telemetry, behavioral analytics, crash dumps
-                    containing request payloads, or advertising identifiers. No mandatory user
-                    account or sign-in is required to use any feature of the Desktop or Web client.
+                    OnSteroid does not include third-party advertising trackers, user behavior analytics, or telemetry scrapers.
+                    We never harvest or monetize your request payloads, variables, or responses. Account creation is always optional—you
+                    are never blocked by mandatory paywalls or sign-in requirements to execute requests or test APIs.
                   </p>
                 </div>
               </div>
@@ -90,12 +98,11 @@ import { DownloadService } from '../../services/download.service';
                   <app-icon name="terminal" class="size-5" />
                 </div>
                 <div>
-                  <h2 class="text-lg font-semibold text-zinc-950">3. Direct Network Dispatch</h2>
+                  <h2 class="text-lg font-semibold text-zinc-950">3. Direct Network Dispatch Without Intermediate Proxies</h2>
                   <p class="mt-2 text-sm leading-relaxed text-zinc-600 sm:text-[15px]">
-                    When you send an HTTP/HTTPS request from the OnSteroid Desktop App, the request
-                    is dispatched directly from your operating system's network stack to the target
-                    endpoint you specify. Your requests, headers, and responses are never routed
-                    through third-party inspection servers.
+                    When you dispatch an HTTP/HTTPS call from OnSteroid, requests are sent directly to the destination server
+                    you designate (via the OS network stack in Desktop, or direct fetch in Web). Your credentials, bearer tokens,
+                    and API request bodies are never routed through intermediary third-party inspection relays.
                   </p>
                 </div>
               </div>

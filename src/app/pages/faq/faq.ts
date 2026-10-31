@@ -175,7 +175,7 @@ export class FaqComponent {
       category: 'Privacy & Security',
       question: 'Does OnSteroid send my API keys or requests to external servers?',
       answer:
-        'No. OnSteroid does not transmit your collections, secret keys, bearer tokens, or payloads to any third-party telemetry or cloud-sync servers. Everything is persisted locally in your client storage.'
+        'By default, OnSteroid operates in local-first mode where your collections, secret keys, tokens, and payloads are stored strictly on your local machine. If you choose to log in, you can optionally persist and sync your collections to your authenticated backend database. Dispatched HTTP requests always route directly to your specified API hosts without third-party surveillance, telemetry, or proxy snooping.'
     },
     {
       id: 'encryption-script',

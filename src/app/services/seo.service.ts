@@ -152,7 +152,7 @@ export class SeoService {
         'Embedded Microsoft VS Code Monaco Editor with real-time JSON linting',
         'Drag-and-drop JSON capsule, share-link, and OpenAPI/Swagger import',
         'Direct native HTTP/HTTPS desktop engine with zero CORS restrictions',
-        '100% local storage with zero cloud paywalls or remote telemetry'
+        'Local-first privacy with optional backend cloud sync and zero third-party telemetry'
       ]
     };
 

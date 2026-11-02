@@ -31,6 +31,7 @@ export class DownloadService {
 
   readonly version = computed(() => this.config().version);
   readonly webAppRootUrl = computed(() => this.config().webAppRootUrl);
+  readonly webAppDisplayUrl = computed(() => buildWebAppLaunchUrl(this.config(), { cacheBust: false }));
   readonly webAppUrl = computed(() => buildWebAppLaunchUrl(this.config()));
   readonly githubUrl = computed(() => this.config().githubUrl);
 

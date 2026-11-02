@@ -101,10 +101,21 @@ export function buildDesktopDownloadUrl(
 }
 
 /**
- * Helper to build the full launch URL for the web app
+ * Helper to build the launch URL for the web app.
+ * Appends cache-busting parameters (_v and _t) to trigger the browser to always
+ * fetch the latest deployed web application and bypass browser cache.
  */
-export function buildWebAppLaunchUrl(config: AppLinksConfig = APP_LINKS_CONFIG): string {
+export function buildWebAppLaunchUrl(
+  config: AppLinksConfig = APP_LINKS_CONFIG,
+  options: { cacheBust?: boolean } = { cacheBust: true }
+): string {
   const root = config.webAppRootUrl.replace(/\/+$/, '');
   const path = config.webAppLaunchPath.replace(/^\/+/, '');
-  return path ? `${root}/${path}` : root;
+  const base = path ? `${root}/${path}` : root;
+  if (!options.cacheBust) {
+    return base;
+  }
+  const separator = base.includes('?') ? '&' : '?';
+  const ver = encodeURIComponent(config.version || '1.0.0');
+  return `${base}${separator}_v=${ver}&_t=${Date.now()}`;
 }

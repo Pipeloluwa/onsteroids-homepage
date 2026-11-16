@@ -4,24 +4,24 @@
  * ONSTEROID DESIGN SYSTEM — PRECISION DEVELOPER STUDIO EDITION
  * ----------------------------------------------------------------------------
  * Compact, high-density typography, refined surfaces, and WCAG AA contrast.
- * Neutral palette: Tailwind `zinc`. Accent palette: `brand-*` (#FF6C37).
+ * Neutral palette: Tailwind `zinc`. Accent palette: `brand-*` (Electric Blue #3B82F6 / #2563EB & White).
  * ========================================================================== */
 
 @theme {
   --font-sans: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --color-brand-50: #fff5f0;
-  --color-brand-100: #ffe8dc;
-  --color-brand-200: #ffcdb3;
-  --color-brand-300: #ffa983;
-  --color-brand-400: #ff8a57;
-  --color-brand-500: #ff6c37;
-  --color-brand-600: #e8531c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
 
   --color-ink: #09090b;
 
@@ -236,14 +236,14 @@
   }
 
   .text-gradient-brand {
-    background-image: linear-gradient(110deg, #ff6c37 0%, #e8531c 45%, #c2410c 100%);
+    background-image: linear-gradient(110deg, #3b82f6 0%, #2563eb 45%, #1d4ed8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .text-gradient-brand-light {
-    background-image: linear-gradient(110deg, #ffc2a3 0%, #ff8a57 45%, #ff6c37 100%);
+    background-image: linear-gradient(110deg, #bfdbfe 0%, #60a5fa 45%, #3b82f6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -303,24 +303,24 @@
   /* White text on every stop meets WCAG AA (≥ 4.5:1). */
   .btn-primary {
     color: #fff;
-    background-image: linear-gradient(180deg, #d94b12 0%, #b33b0a 100%);
+    background-image: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
     box-shadow:
       inset 0 1px 0 0 rgb(255 255 255 / 0.25),
       inset 0 -1px 0 0 rgb(0 0 0 / 0.15),
-      0 0 0 1px rgb(168 55 9 / 0.95),
-      0 6px 16px -4px rgb(232 83 28 / 0.48),
-      0 1px 3px 0 rgb(232 83 28 / 0.25);
+      0 0 0 1px rgb(29 78 216 / 0.95),
+      0 6px 16px -4px rgb(37 99 235 / 0.48),
+      0 1px 3px 0 rgb(37 99 235 / 0.25);
     text-shadow: 0 1px 0 rgb(0 0 0 / 0.12);
   }
   .btn-primary:hover {
     transform: translateY(-1px);
-    background-image: linear-gradient(180deg, #e05016 0%, #a63608 100%);
+    background-image: linear-gradient(180deg, #3b82f6 0%, #1e40af 100%);
     box-shadow:
       inset 0 1px 0 0 rgb(255 255 255 / 0.28),
       inset 0 -1px 0 0 rgb(0 0 0 / 0.15),
-      0 0 0 1px rgb(166 54 8 / 0.95),
-      0 10px 22px -6px rgb(232 83 28 / 0.58),
-      0 2px 5px 0 rgb(232 83 28 / 0.28);
+      0 0 0 1px rgb(30 64 175 / 0.95),
+      0 10px 22px -6px rgb(37 99 235 / 0.58),
+      0 2px 5px 0 rgb(37 99 235 / 0.28);
   }
 
   .btn-secondary {
@@ -406,7 +406,7 @@
   .card-hover:hover {
     transform: translateY(-2px);
     box-shadow:
-      0 0 0 1px rgb(232 83 28 / 0.22),
+      0 0 0 1px rgb(37 99 235 / 0.22),
       0 2px 4px 0 rgb(9 9 11 / 0.04),
       0 18px 36px -16px rgb(9 9 11 / 0.14);
   }
@@ -434,11 +434,11 @@
     height: 2rem;
     border-radius: 0.55rem;
     color: #fff;
-    background-image: linear-gradient(180deg, #ff7a45 0%, #e8531c 100%);
+    background-image: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
     box-shadow:
       inset 0 1px 0 0 rgb(255 255 255 / 0.3),
-      0 0 0 1px rgb(194 65 12 / 0.6),
-      0 4px 10px -3px rgb(232 83 28 / 0.45);
+      0 0 0 1px rgb(29 78 216 / 0.6),
+      0 4px 10px -3px rgb(37 99 235 / 0.45);
   }
 
   .kbd {
@@ -503,7 +503,7 @@
     color: #a1a1aa;
   }
   .tok-var {
-    color: #ff9466;
+    color: #60a5fa;
   }
 }
 

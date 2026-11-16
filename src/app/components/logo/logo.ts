@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
       aria-label="OnSteroid home"
     >
       <span
-        class="relative grid size-8 place-items-center rounded-[9px] bg-linear-to-b from-[#ff7a45] to-brand-600 text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_0_0_1px_rgb(194_65_12/0.55),0_4px_10px_-3px_rgb(232_83_28/0.5)] transition-transform duration-200 group-hover:scale-105"
+        class="relative grid size-8 place-items-center rounded-[9px] bg-linear-to-b from-[#3b82f6] to-[#1d4ed8] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_0_0_1px_rgb(29_78_216/0.55),0_4px_10px_-3px_rgb(37_99_235/0.5)] transition-transform duration-200 group-hover:scale-105"
       >
         <svg viewBox="0 0 24 24" class="size-4" fill="currentColor" aria-hidden="true">
           <path

@@ -45,7 +45,7 @@ import { DownloadService } from '../../services/download.service';
           <!-- Primary Detected OS Spotlight Card -->
           <div class="animate-fade-up mx-auto mt-10 max-w-2xl">
             <div
-              class="relative overflow-hidden rounded-3xl bg-linear-to-b from-brand-500/30 via-zinc-950/10 to-zinc-950/5 p-[1.5px] shadow-[0_24px_60px_-20px_rgb(232_83_28/0.22),0_4px_16px_-4px_rgb(9_9_11/0.06)]"
+              class="relative overflow-hidden rounded-3xl bg-linear-to-b from-brand-500/30 via-zinc-950/10 to-zinc-950/5 p-[1.5px] shadow-[0_24px_60px_-20px_rgb(37_99_235/0.22),0_4px_16px_-4px_rgb(9_9_11/0.06)]"
             >
               <div class="relative overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-white p-5 text-center sm:p-9">
                 <div

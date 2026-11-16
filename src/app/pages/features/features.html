@@ -68,6 +68,22 @@
           <app-icon name="code" class="size-3.5 text-emerald-600" />
           <span>Monaco Editor</span>
         </a>
+        <a
+          routerLink="/features"
+          fragment="soap"
+          class="inline-flex items-center gap-1.5 rounded-full border border-zinc-950/10 bg-white px-3.5 py-2 text-zinc-700 shadow-2xs transition-colors hover:border-brand-500/40 hover:text-zinc-950"
+        >
+          <app-icon name="terminal" class="size-3.5 text-amber-600" />
+          <span>XML &amp; SOAP Services</span>
+        </a>
+        <a
+          routerLink="/features"
+          fragment="folders"
+          class="inline-flex items-center gap-1.5 rounded-full border border-zinc-950/10 bg-white px-3.5 py-2 text-zinc-700 shadow-2xs transition-colors hover:border-brand-500/40 hover:text-zinc-950"
+        >
+          <app-icon name="folder" class="size-3.5 text-blue-600" />
+          <span>Folders &amp; Auto-Save</span>
+        </a>
       </nav>
     </div>
   </section>
@@ -413,6 +429,168 @@
               <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
             </span>
             <span>Foldable JSON keys, bracket matching, and multi-cursor editing</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FEATURE 5: ENTERPRISE XML & SOAP 1.1 / 1.2 SERVICES                   -->
+  <!-- ===================================================================== -->
+  <section
+    id="soap"
+    class="border-t border-zinc-950/[0.06] py-14 sm:py-20 md:py-24"
+    aria-labelledby="feat-soap-title"
+  >
+    <div class="container-page grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <div class="min-w-0 lg:col-span-6">
+        <div class="eyebrow">
+          <app-icon name="terminal" class="size-3.5" />
+          <span>Enterprise Protocol Support</span>
+        </div>
+        <h2
+          id="feat-soap-title"
+          class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-3xl"
+        >
+          Full XML &amp; SOAP 1.1 / 1.2 Web Services
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Execute enterprise SOAP requests just like Postman. OnSteroid automatically scaffolds
+          W3C-compliant Envelope templates, infers SOAPAction headers, and manages Content-Type
+          negotiation for both <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-[13px] text-amber-700">text/xml</code> and
+          <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-[13px] text-amber-700">application/soap+xml</code>.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Inspect and format massive XML documents across 4 distinct wrapping views:
+          <strong class="font-semibold text-zinc-900">Pretty</strong>,
+          <strong class="font-semibold text-zinc-900">Key-Field</strong> (one line per element for fast scanning),
+          <strong class="font-semibold text-zinc-900">Soft Wrap</strong>, and
+          <strong class="font-semibold text-zinc-900">Collapsed</strong> (single-line minified), with full
+          non-destructive Monaco undo/redo (<code class="font-mono text-xs text-zinc-800">Ctrl+Z / Ctrl+Y</code>).
+        </p>
+        <ul class="mt-5 space-y-2.5 text-sm text-zinc-700">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Pre-configured SOAP Envelope, Header, and Body starter templates</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>XML element lock encryption margin matching JSON workflows</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Automatic SOAPAction header resolution with smart override capabilities</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="min-w-0 lg:col-span-6">
+        <div class="rounded-2xl border border-zinc-200/90 bg-linear-to-br from-amber-50/70 via-white to-orange-50/40 p-4 shadow-sm sm:p-7">
+          <div class="overflow-hidden rounded-xl border border-zinc-800 bg-[#1E1E1E] p-3.5 font-mono text-[13px] text-white shadow-lg sm:p-4">
+            <div class="mb-2.5 flex flex-wrap items-center justify-between gap-1.5 border-b border-white/10 pb-2.5 font-sans text-xs">
+              <span class="font-semibold text-amber-300">SOAP 1.1 Web Service Envelope</span>
+              <span class="rounded bg-black/40 px-2 py-0.5 text-zinc-400 font-mono text-[11px]">POST • text/xml</span>
+            </div>
+            <div class="space-y-1 text-xs">
+              <div class="text-[#808080]">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div>
+              <div class="text-[#569CD6]">&lt;<span class="text-[#4EC9B0]">soap:Envelope</span> <span class="text-[#92CAF4]">xmlns:soap</span>=<span class="text-[#CE9178]">"http://schemas.xmlsoap.org/soap/envelope/"</span>&gt;</div>
+              <div class="pl-3 text-[#569CD6]">&lt;<span class="text-[#4EC9B0]">soap:Body</span>&gt;</div>
+              <div class="pl-6 text-[#569CD6]">&lt;<span class="text-[#DCDCAA]">AuthorizePayment</span> <span class="text-[#92CAF4]">xmlns</span>=<span class="text-[#CE9178]">"http://enterprise.api/soap"</span>&gt;</div>
+              <div class="pl-9 truncate"><span class="text-[#569CD6]">&lt;<span class="text-[#9CDCFE]">Amount</span>&gt;</span><span class="text-white">125000</span><span class="text-[#569CD6]">&lt;/<span class="text-[#9CDCFE]">Amount</span>&gt;</span></div>
+              <div class="pl-9 truncate rounded bg-[#FF6C37]/20 px-1.5 py-0.5">
+                <span class="text-[#FF6C37]">🔒</span> <span class="text-[#569CD6]">&lt;<span class="text-[#9CDCFE]">SecretKey</span>&gt;</span><span class="text-[#CE9178]">enc_aes256_x89...</span><span class="text-[#569CD6]">&lt;/<span class="text-[#9CDCFE]">SecretKey</span>&gt;</span>
+              </div>
+              <div class="pl-6 text-[#569CD6]">&lt;/<span class="text-[#DCDCAA]">AuthorizePayment</span>&gt;</div>
+              <div class="pl-3 text-[#569CD6]">&lt;/<span class="text-[#4EC9B0]">soap:Body</span>&gt;</div>
+              <div class="text-[#569CD6]">&lt;/<span class="text-[#4EC9B0]">soap:Envelope</span>&gt;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FEATURE 6: REQUEST FOLDERS, BATCH ACTIONS & AUTO-SAVE                 -->
+  <!-- ===================================================================== -->
+  <section
+    id="folders"
+    class="border-t border-zinc-950/[0.06] py-14 sm:py-20 md:py-24"
+    aria-labelledby="feat-folders-title"
+  >
+    <div class="container-page grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <div class="order-2 min-w-0 lg:order-1 lg:col-span-6">
+        <div class="rounded-2xl border border-zinc-200/90 bg-linear-to-br from-blue-50/70 via-white to-indigo-50/40 p-4 shadow-sm sm:p-7">
+          <div class="space-y-2.5">
+            <div class="flex items-center gap-2 rounded-xl border border-zinc-200 bg-white p-3 shadow-2xs">
+              <app-icon name="folder" class="size-4 text-blue-600 shrink-0" />
+              <span class="font-semibold text-zinc-900 text-xs">Auth &amp; Session Endpoints</span>
+              <span class="ml-auto rounded-full bg-blue-500/15 px-2 py-0.5 font-mono text-[10px] font-semibold text-blue-700">3 Requests</span>
+            </div>
+            <div class="ml-6 space-y-1.5 border-l-2 border-blue-500/20 pl-3">
+              <div class="flex items-center gap-2 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-700">
+                <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 font-mono text-[10px] font-bold text-emerald-700">POST</span>
+                <span class="truncate">/oauth/v2/token</span>
+              </div>
+              <div class="flex items-center gap-2 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-700">
+                <span class="rounded bg-sky-500/20 px-1.5 py-0.5 font-mono text-[10px] font-bold text-sky-700">GET</span>
+                <span class="truncate">/oauth/v2/userinfo</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 rounded-xl border border-dashed border-zinc-300 bg-zinc-50/60 p-3 text-xs text-zinc-500">
+              <app-icon name="sparkles" class="size-3.5 text-brand-600 shrink-0" />
+              <span>Multi-select with Shift+Click or Ctrl+Click &amp; batch-drag into folders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 min-w-0 lg:order-2 lg:col-span-6">
+        <div class="eyebrow">
+          <app-icon name="folder" class="size-3.5" />
+          <span>Workspace Organization</span>
+        </div>
+        <h2
+          id="feat-folders-title"
+          class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-zinc-950 sm:text-3xl"
+        >
+          Draggable Request Folders &amp; Structure Auto-Save
+        </h2>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Keep hundreds of endpoints organized effortlessly inside your capsules. Group requests into
+          Postman-style Request Folders, multi-select ranges with <code class="font-mono text-xs text-zinc-800">Shift+Click</code>
+          or <code class="font-mono text-xs text-zinc-800">Ctrl+Click</code>, and batch-drag them directly into folders.
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-600 sm:text-base">
+          Folders can be repositioned freely anywhere in the hierarchy—above, below, or interleaved with
+          root requests. Every rearrangement triggers instant local session snapshotting and debounced
+          cloud Auto-Save automatically.
+        </p>
+        <ul class="mt-5 space-y-2.5 text-sm text-zinc-700">
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Batch selection with checkboxes, Shift+Click, or Ctrl+Click</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Draggable folder repositioning in any custom sequence</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-700">
+              <app-icon name="check" class="size-3.5" [strokeWidth]="2.5" />
+            </span>
+            <span>Zero manual save clicks: structure and state auto-save continuously</span>
           </li>
         </ul>
       </div>

@@ -44,7 +44,7 @@
           <!-- Clear, Scannable Lead -->
           <p class="animate-fade-up mt-4 max-w-xl text-[15px] leading-relaxed text-zinc-600 sm:text-base">
             The local-native API workspace engineered for modern backend teams. Lock individual JSON
-            fields for pre-flight encryption, chain requests with
+            &amp; XML fields for pre-flight encryption, send SOAP 1.1/1.2 web services, chain requests with
             <strong class="font-semibold text-zinc-900">Auto-Auth &amp; Trigger</strong>, and
             dispatch direct OS-level calls with zero CORS blocks or cloud paywalls.
           </p>
@@ -124,12 +124,22 @@
           <div class="animate-fade-up mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[13px] text-zinc-600">
             <span class="inline-flex items-center gap-1.5 font-medium text-zinc-700">
               <app-icon name="file-json" class="size-4 shrink-0 text-brand-600" />
-              <span>JSON Capsule &amp; Share-Link Import</span>
+              <span>JSON Capsule &amp; Share-Link</span>
+            </span>
+            <span class="hidden text-zinc-300 sm:inline" aria-hidden="true">•</span>
+            <span class="inline-flex items-center gap-1.5 font-medium text-zinc-700">
+              <app-icon name="code" class="size-4 shrink-0 text-amber-600" />
+              <span>XML &amp; SOAP 1.1 / 1.2</span>
             </span>
             <span class="hidden text-zinc-300 sm:inline" aria-hidden="true">•</span>
             <span class="inline-flex items-center gap-1.5 font-medium text-zinc-700">
               <app-icon name="braces" class="size-4 shrink-0 text-emerald-600" />
               <span>OpenAPI / Swagger 3.0</span>
+            </span>
+            <span class="hidden text-zinc-300 sm:inline" aria-hidden="true">•</span>
+            <span class="inline-flex items-center gap-1.5 font-medium text-zinc-700">
+              <app-icon name="terminal" class="size-4 shrink-0 text-purple-600" />
+              <span>cURL Portability</span>
             </span>
             <span class="hidden text-zinc-300 sm:inline" aria-hidden="true">•</span>
             <span class="inline-flex items-center gap-1.5 font-medium text-zinc-700">
@@ -168,12 +178,16 @@
               <!-- Layer 1: Endpoint + Auto-Auth + Trigger -->
               <div class="rounded-xl border border-white/[0.08] bg-[#1E2028] p-3 sm:p-3.5">
                 <div class="flex flex-wrap items-center justify-between gap-1.5 text-xs text-zinc-400">
-                  <span class="font-semibold text-zinc-200">1. Request &amp; Chaining Bar</span>
+                  <span class="font-semibold text-zinc-200">1. Request &amp; Chaining Bar (REST, JSON &amp; SOAP)</span>
                   <span class="font-mono text-xs text-emerald-400">Auto-Auth + Trigger</span>
                 </div>
                 <div class="mt-2 flex flex-wrap items-center gap-2 font-mono text-xs sm:text-[13px]">
                   <span class="rounded bg-[#FF6C37]/20 px-2 py-0.5 font-bold text-[#FF6C37]">POST</span>
                   <span class="min-w-0 truncate text-zinc-200">{{ '{{baseUrl}}' }}/v1/charges</span>
+                  <span class="inline-flex items-center gap-1 rounded bg-amber-500/15 px-2 py-0.5 font-sans text-xs font-semibold text-amber-300">
+                    <app-icon name="code" class="size-3 shrink-0" />
+                    <span>SOAP 1.1 / 1.2</span>
+                  </span>
                   <span class="inline-flex items-center gap-1 rounded bg-emerald-500/15 px-2.5 py-0.5 font-sans text-xs font-semibold text-emerald-300 sm:ml-auto">
                     <app-icon name="route" class="size-3.5 shrink-0" />
                     <span>Trigger: Verify Ledger</span>
@@ -186,7 +200,7 @@
                 <div class="flex flex-wrap items-center justify-between gap-1.5 text-xs">
                   <span class="inline-flex items-center gap-1.5 font-semibold text-white">
                     <app-icon name="lock" class="size-3.5 shrink-0 text-[#FF6C37]" />
-                    <span>2. Selective Per-Field &amp; Header Encryption</span>
+                    <span>2. Selective JSON &amp; XML Field Encryption</span>
                   </span>
                   <span class="rounded bg-[#FF6C37]/20 px-2 py-0.5 font-mono text-xs font-semibold text-[#FF6C37]">
                     encryptScript()
@@ -194,14 +208,14 @@
                 </div>
                 <div class="mt-2.5 grid grid-cols-1 gap-2.5 font-mono text-xs sm:grid-cols-2">
                   <div class="min-w-0 rounded-lg bg-black/40 p-3 text-zinc-200">
-                    <div class="font-sans text-[11.5px] font-medium text-zinc-400">Editor (Locked Gutter Keys)</div>
+                    <div class="font-sans text-[11.5px] font-medium text-zinc-400">Monaco Gutter Locks (JSON &amp; XML)</div>
                     <div class="mt-1.5 truncate"><span class="text-[#FF6C37]">🔒</span> "cardToken": "tok_visa_4242"</div>
-                    <div class="truncate"><span class="text-[#FF6C37]">🔒</span> "cvc": "942"</div>
+                    <div class="truncate"><span class="text-[#FF6C37]">🔒</span> &lt;cvc&gt;942&lt;/cvc&gt;</div>
                   </div>
                   <div class="min-w-0 rounded-lg bg-black/40 p-3 text-emerald-300">
                     <div class="font-sans text-[11.5px] font-medium text-zinc-400">Outbound Wire Payload</div>
                     <div class="mt-1.5 truncate">"cardToken": "enc_aes256_7f8e=="</div>
-                    <div class="truncate">"cvc": "enc_aes256_3d19=="</div>
+                    <div class="truncate">&lt;cvc&gt;enc_aes256_3d19==&lt;/cvc&gt;</div>
                   </div>
                 </div>
               </div>
@@ -212,10 +226,10 @@
                   <span class="grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/20 text-emerald-400">
                     <app-icon name="check" class="size-3" [strokeWidth]="2.5" />
                   </span>
-                  <span class="font-medium text-zinc-200">200 OK • 38 ms • 3/3 Tests Passed</span>
+                  <span class="font-medium text-zinc-200">200 OK • 38 ms • Auto-Cleared Responses</span>
                 </div>
                 <span class="font-mono text-xs text-zinc-400">
-                  Encryption Console &amp; Script Console Ready
+                  Native OS Dispatch • Zero Proxy Lag
                 </span>
               </div>
             </div>
@@ -630,45 +644,128 @@
         </div>
       </div>
 
-      <!-- SHOWCASE ROW 3: 3-Column High-Impact Feature Cards -->
-      <div class="mt-20 grid grid-cols-1 gap-5 md:grid-cols-3">
+      <!-- SHOWCASE ROW 3: Full XML & SOAP 1.1 / 1.2 Web Services & Multi-Mode Text Wrapping -->
+      <div class="mt-14 grid grid-cols-1 items-center gap-8 sm:mt-20 sm:gap-10 lg:grid-cols-12">
+        <div class="min-w-0 lg:col-span-5">
+          <span class="inline-flex items-center gap-1.5 rounded-md bg-amber-50 px-2.5 py-1 font-mono text-xs font-semibold text-amber-800 ring-1 ring-amber-200">
+            03 • ENTERPRISE XML &amp; SOAP SERVICES
+          </span>
+          <h3 class="mt-3 text-xl font-semibold tracking-tight text-zinc-950 sm:text-2xl">
+            First-class SOAP 1.1 &amp; 1.2 web services, right out of the box.
+          </h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-zinc-600">
+            Test enterprise and legacy SOAP endpoints with complete fidelity. OnSteroid automatically
+            generates W3C-compliant SOAP Envelope, Header, and Body templates, resolves
+            <code class="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-[13px] text-amber-700">SOAPAction</code>
+            headers, and provides line-by-line XML field encryption matching JSON workflows.
+          </p>
+          <ul class="mt-4 space-y-2.5 text-sm text-zinc-700">
+            <li class="flex items-start gap-2.5">
+              <app-icon name="check" class="mt-0.5 size-4 shrink-0 text-emerald-600" [strokeWidth]="2.5" />
+              <span>Automatic content negotiation for <code class="font-mono text-xs text-zinc-800">text/xml</code> and <code class="font-mono text-xs text-zinc-800">application/soap+xml</code></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <app-icon name="check" class="mt-0.5 size-4 shrink-0 text-emerald-600" [strokeWidth]="2.5" />
+              <span>4 Advanced Text Wrap views: <strong>Pretty, Key-Field, Soft Wrap</strong>, and <strong>Collapsed</strong></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <app-icon name="check" class="mt-0.5 size-4 shrink-0 text-emerald-600" [strokeWidth]="2.5" />
+              <span>Non-destructive Monaco undo/redo (<code class="font-mono text-xs text-zinc-800">Ctrl+Z / Ctrl+Y</code>) across format styles</span>
+            </li>
+          </ul>
+          <div class="mt-5">
+            <a routerLink="/features" fragment="soap" class="link-arrow">
+              <span>Learn about XML &amp; SOAP testing</span>
+              <app-icon name="arrow-right" class="size-4" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual SOAP Envelope & Text Wrap Card -->
+        <div class="min-w-0 lg:col-span-7">
+          <div class="relative rounded-2xl border border-zinc-200/90 bg-linear-to-br from-amber-50/70 via-white to-orange-50/40 p-4 shadow-sm sm:p-7">
+            <div class="overflow-hidden rounded-xl border border-zinc-800 bg-[#1E1E1E] p-3.5 font-mono text-[13px] text-white shadow-lg sm:p-4">
+              <!-- Formatting Bar Preview -->
+              <div class="mb-2.5 flex flex-wrap items-center justify-between gap-1.5 border-b border-white/10 pb-2.5 font-sans text-xs">
+                <div class="flex items-center gap-1.5">
+                  <span class="rounded bg-amber-500/20 px-2 py-0.5 font-mono text-[11px] font-bold text-amber-300">XML (SOAP 1.1)</span>
+                  <span class="text-zinc-400 font-mono text-[11px] truncate">SOAPAction: "http://tempuri.org/Execute"</span>
+                </div>
+                <div class="flex items-center gap-1 rounded-md bg-black/40 p-1 text-[11px]">
+                  <span class="rounded bg-brand-500/30 px-1.5 py-0.5 text-white font-medium">Pretty</span>
+                  <span class="px-1.5 py-0.5 text-zinc-400">Key-Field</span>
+                  <span class="px-1.5 py-0.5 text-zinc-400">Wrap</span>
+                  <span class="px-1.5 py-0.5 text-zinc-400">1-Line</span>
+                </div>
+              </div>
+              <!-- Code Preview with Gutter Lock -->
+              <div class="space-y-1 text-xs overflow-x-auto">
+                <div class="text-[#808080]">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div>
+                <div class="text-[#569CD6]">&lt;<span class="text-[#4EC9B0]">soap:Envelope</span> <span class="text-[#92CAF4]">xmlns:soap</span>=<span class="text-[#CE9178]">"http://schemas.xmlsoap.org/soap/envelope/"</span>&gt;</div>
+                <div class="pl-3 text-[#569CD6]">&lt;<span class="text-[#4EC9B0]">soap:Body</span>&gt;</div>
+                <div class="pl-6 text-[#569CD6]">&lt;<span class="text-[#DCDCAA]">ProcessTransaction</span> <span class="text-[#92CAF4]">xmlns</span>=<span class="text-[#CE9178]">"http://tempuri.org/"</span>&gt;</div>
+                <div class="pl-9 truncate"><span class="text-[#569CD6]">&lt;<span class="text-[#9CDCFE]">AccountId</span>&gt;</span><span class="text-white">ACC-883921</span><span class="text-[#569CD6]">&lt;/<span class="text-[#9CDCFE]">AccountId</span>&gt;</span></div>
+                <div class="pl-9 truncate rounded bg-[#FF6C37]/20 px-1.5 py-0.5">
+                  <span class="text-[#FF6C37]">🔒</span> <span class="text-[#569CD6]">&lt;<span class="text-[#9CDCFE]">ApiKey</span>&gt;</span><span class="text-[#CE9178]">sec_live_9204fa</span><span class="text-[#569CD6]">&lt;/<span class="text-[#9CDCFE]">ApiKey</span>&gt;</span>
+                </div>
+                <div class="pl-6 text-[#569CD6]">&lt;/<span class="text-[#DCDCAA]">ProcessTransaction</span>&gt;</div>
+                <div class="pl-3 text-[#569CD6]">&lt;/<span class="text-[#4EC9B0]">soap:Body</span>&gt;</div>
+                <div class="text-[#569CD6]">&lt;/<span class="text-[#4EC9B0]">soap:Envelope</span>&gt;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOWCASE ROW 4: 4-Column Feature Cards Grid -->
+      <div class="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="card card-hover p-6">
+          <span class="icon-tile">
+            <app-icon name="folder" class="size-4.5 text-blue-600" />
+          </span>
+          <h3 class="mt-4 text-[17px] font-semibold text-zinc-950">
+            Folders &amp; Multi-Select Drag
+          </h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
+            Multi-select requests with <code class="font-mono text-xs text-zinc-800">Shift+Click</code> or <code class="font-mono text-xs text-zinc-800">Ctrl+Click</code> and drag them directly into folders. Reorder folders freely with instant snapshotting and cloud Auto-Save.
+          </p>
+        </article>
+
+        <article class="card card-hover p-6">
+          <span class="icon-tile">
+            <app-icon name="monitor" class="size-4.5 text-emerald-600" />
+          </span>
+          <h3 class="mt-4 text-[17px] font-semibold text-zinc-950">
+            Native Desktop &amp; Input Menus
+          </h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
+            Direct OS-level networking with zero CORS bottlenecks. Native right-click Cut, Copy, Paste, and Undo in all inputs. Auto-clearing stale responses on every execution.
+          </p>
+        </article>
+
+        <article class="card card-hover p-6">
+          <span class="icon-tile">
+            <app-icon name="sparkles" class="size-4.5 text-purple-600" />
+          </span>
+          <h3 class="mt-4 text-[17px] font-semibold text-zinc-950">
+            Dynamic Utilities &amp; cURL
+          </h3>
+          <p class="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
+            Built-in utility variables (<code class="font-mono text-xs text-zinc-800">$guid</code>, <code class="font-mono text-xs text-zinc-800">$timestamp</code>) with one-click dynamic or static generation, plus instant executable cURL export and import.
+          </p>
+        </article>
+
         <article class="card card-hover p-6">
           <span class="icon-tile">
             <app-icon name="zap" class="size-4.5 text-sky-600" />
           </span>
           <h3 class="mt-4 text-[17px] font-semibold text-zinc-950">
-            Isolated Iframe Script Sandbox
+            Sandboxed Iframe Scripts
           </h3>
           <p class="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
             Execute <code class="font-mono text-[13px] text-zinc-800">preScript</code>,
             <code class="font-mono text-[13px] text-zinc-800">postScript</code>, and
-            <code class="font-mono text-[13px] text-zinc-800">testScript</code> inside a sandboxed
-            iframe boundary with dedicated <strong class="font-semibold text-zinc-900">Script Console</strong> logging.
-          </p>
-        </article>
-
-        <article class="card card-hover p-6">
-          <span class="icon-tile">
-            <app-icon name="code" class="size-4.5 text-purple-600" />
-          </span>
-          <h3 class="mt-4 text-[17px] font-semibold text-zinc-950">
-            VS Code Monaco &amp; Saved Examples
-          </h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
-            Format payloads across 4 wrapping modes (<strong class="font-semibold text-zinc-900">Pretty, Key-Field, Wrap, 1-Line</strong>) and bookmark real responses as nested request <strong class="font-semibold text-zinc-900">Examples</strong>.
-          </p>
-        </article>
-
-        <article class="card card-hover p-6">
-          <span class="icon-tile">
-            <app-icon name="upload" class="size-4.5 text-brand-600" />
-          </span>
-          <h3 class="mt-4 text-[17px] font-semibold text-zinc-950">
-            Swagger, JSON &amp; Share-Link Import
-          </h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
-            Import OpenAPI / Swagger URLs, upload OnSteroid JSON capsule exports, or paste a shared
-            capsule token to load endpoints and variables in seconds.
+            <code class="font-mono text-[13px] text-zinc-800">testScript</code> inside an isolated iframe sandbox with dedicated Script &amp; Encryption console logging.
           </p>
         </article>
       </div>

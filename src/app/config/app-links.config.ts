@@ -74,7 +74,7 @@ export const APP_LINKS_CONFIG: AppLinksConfig = {
   // Path to open the web version
   webAppLaunchPath: '/',
 
-  version: '1.0.0',
+  version: '3.0.0',
 
   desktopFiles: {
     windowsInstaller: 'OnSteroid-Setup.exe',
